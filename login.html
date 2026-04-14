@@ -15,7 +15,7 @@
 <label for="password">Password:</label>
 <input type="text" id="password" name="pass_word">
 
-<button type="button">Login</button>
+<button type="button" id="button">Login</button>
 
 <script>
     const users = {
@@ -23,13 +23,21 @@
     "perry": "theplatypus",
     "admin": "admin"
 };
+    
+let attempts = 0;
+const maxAttempts = 5;
+
+const btn = document.getElementById("button");
+btn.addEventListener("click", function() {
+  login();
+});
 
 function login() {
-    attempts = 0
+    
     // Broken site, doesn't stop from bruteforce, or it'd have this
-    // if (attempts > 5) {
+    // if (attempts >= maxAttempts) {
     //    alert("You've been locked out, please contact an administrator");
-    //    break;
+    //    return;
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     
