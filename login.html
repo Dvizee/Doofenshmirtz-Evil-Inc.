@@ -34,10 +34,9 @@ btn.addEventListener("click", function() {
 
 function login() {
     
-    // Broken site, doesn't stop from bruteforce, or it'd have this
-    // if (attempts >= maxAttempts) {
-    //    alert("You've been locked out, please contact an administrator");
-    //    return;
+    if (attempts >= maxAttempts) {
+       alert("You've been locked out, please contact an administrator");
+       return;
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     
