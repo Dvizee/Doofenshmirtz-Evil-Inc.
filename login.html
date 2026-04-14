@@ -17,5 +17,33 @@
 
 <button type="button">Login</button>
 
+<script>
+    const users = {
+    "doof": "EVIL",
+    "perry": "theplatypus",
+    "admin": "admin"
+};
+
+function login() {
+    attempts = 0
+    // Broken site, doesn't stop from bruteforce, or it'd have this
+    // if (attempts > 5) {
+    //    alert("You've been locked out, please contact an administrator");
+    //    break;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    
+    if (users[username] && users[username] === password) {
+        alert('Login successful!');
+        // Redirect or show logged-in content
+        // window.location.href = '/dashboard.html';
+        alert("good job");
+    } else {
+        attempts += 1;
+        alert('Invalid username or password');
+    }
+}
+</script>
+
 </body>
 </html>
