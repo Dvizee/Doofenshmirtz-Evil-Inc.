@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doofenshmirtz Evil Inc. - Search</title>
+</head>
+<body>
+    <h1>Doofenshmirtz Evil Inc.</h1>
+    <p>Search for games and evil plans</p>
+
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="doSearch()">Search</button>
+
+    <div id="results"></div>
+
+    <script>
+        function doSearch() {
+            const query = document.getElementById('searchInput').value;
+            document.getElementById('results').innerHTML = 'Results for: ' + query;
+        }
+    </script>
+</body>
+</html>
