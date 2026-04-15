@@ -18,12 +18,9 @@
 
 <button type="button" id="button">Login</button>
 
-<script>
-    const users = {
-    "doof": "EVIL",
-    "perry": "theplatypus",
-    "admin": "admin"
-};
+<script type="module">
+import { users } from './js/database.js';
+
     
 let attempts = 0;
 const maxAttempts = 5;
@@ -47,6 +44,7 @@ function login() {
         // Redirect or show logged-in content
         // window.location.href = '/dashboard.html';
         alert("good job");
+         window.location.href = "dashboard.html";
     } else {
         attempts += 1;
         alert('Invalid username or password');
