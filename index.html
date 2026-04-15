@@ -3,21 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Doofenshmirtz Evil Inc.</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2d1b4e;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            margin-bottom: 30px;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            margin: 0 8px;
+            padding: 10px 18px;
+            background-color: #2f8f46;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            background-color: #256f37;
+        }
+
+        img {
+            width: 90%;
+            max-width: 1000px;
+            height: 300px;
+            object-fit: cover;
+            border: 4px solid #2f8f46;
+            border-radius: 10px;
+            transform: scaleY(-1);
+        }
+    </style>
 </head>
 <body>
 
-<h1>Doofenshmirtz Evil Inc.</h1>
-<p>Welcome to my evil website-inator</p>
+    <div class="container">
+        <h1>Doofenshmirtz Evil Inc.</h1>
+        <p>Welcome to my evil website-inator</p>
 
-<a href="login.html">Login</a>
-<a href="coaster.html">Coaster</a>
+        <div class="nav-links">
+            <a href="login.html">Login</a>
+            <a href="coaster.html">Coaster</a>
+            <a href="search.html">Search</a>
+            <a href="logs.html">Logs</a>
+        </div>
 
-
-
-
-<img src="https://static.wikia.nocookie.net/great-characters/images/7/7f/3027066-6938013924-latest.png/revision/latest?cb=20191110042821" alt="Heinz Doofenshmirtz" width=1000 height=300 style="transform: scaleY(-1);">
-
-
+        <img src="https://static.wikia.nocookie.net/great-characters/images/7/7f/3027066-6938013924-latest.png/revision/latest?cb=20191110042821" alt="Heinz Doofenshmirtz">
+    </div>
 
 </body>
 </html>
+
