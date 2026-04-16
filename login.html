@@ -24,39 +24,40 @@
     <a href="logs.html">System Log Viewer</a>
 </div>
 
-<script type="module" src="./js/database.js">
-import { users } from './js/database.js';
-
+<script type="module" src="./js/database.js"></script>
+<script type="module">
+    import { users } from './js/database.js';
     
-let attempts = 0;
-const maxAttempts = 5;
-
-const btn = document.getElementById("button");
-btn.addEventListener("click", function() {
-  login();
-});
-
-function login() {
+        
+    let attempts = 0;
+    const maxAttempts = 5;
     
-    // Broken site, doesn't stop from bruteforce, or it'd have this
-    // if (attempts >= maxAttempts) {
-    //    alert("You've been locked out, please contact an administrator");
-    //    return;
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const btn = document.getElementById("button");
+    btn.addEventListener("click", function() {
+      login();
+    });
     
-    if (users[username] && users[username] === password) {
-        alert('Login successful!');
-        // Redirect or show logged-in content
-        // window.location.href = '/dashboard.html';
-        alert("good job");
-         window.location.href = "dashboard.html";
-    } else {
-        attempts += 1;
-        alert('Invalid username or password');
+    function login() {
+        
+        // Broken site, doesn't stop from bruteforce, or it'd have this
+        // if (attempts >= maxAttempts) {
+        //    alert("You've been locked out, please contact an administrator");
+        //    return;
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        if (users[username] && users[username] === password) {
+            alert('Login successful!');
+            // Redirect or show logged-in content
+            // window.location.href = '/dashboard.html';
+            alert("good job");
+             window.location.href = "dashboard.html";
+        } else {
+            attempts += 1;
+            alert('Invalid username or password');
+        }
     }
-}
 </script>
-
+    
 </body>
 </html>
